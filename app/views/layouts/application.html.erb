@@ -11,7 +11,14 @@
   </head>
 
   <body>
-    <%= render partial: 'shared/header'%>
+    <% if logged_in? %>
+      <%= render partial: 'shared/header'%>
+    <% else %>
+      <%= render partial: 'shared/before_login_header'%>
+    <% end %>
+    <div>
+      <p id="notice"><%= flash[:notice] %></p>
+      <p id="alert"><%= flash[:alert] %></p>
     <%= yield %>
     <%= render partial: 'shared/footer'%>
   </body>

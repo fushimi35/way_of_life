@@ -1,2 +1,11 @@
 ja:
-  login: ログイン
+  user_sessions:
+    new:
+      login: ログイン
+      submit: ログイン
+      link_to_new: 登録ページへ
+  users:
+    new:
+      title: ユーザー登録
+      submit: 登録
+      link_to_login: ログインページへ

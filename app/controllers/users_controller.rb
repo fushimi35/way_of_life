@@ -26,8 +26,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to login_url, flash: { success: 'User was successfully created.' }
+      redirect_to login_url, flash: { success: t('.flash_messages.create_success') }
     else
+      flash.now[:danger] = t('.flash_messages.create_danger')
       render :new
     end
   end

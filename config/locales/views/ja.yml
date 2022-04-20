@@ -4,10 +4,17 @@ ja:
     register: 登録
     logout: ログアウト
   users:
+    flash_messages:
+      create_success: ユーザー登録が完了しました
+      create_danger: ユーザー登録に失敗しました
     new:
       title: ユーザー登録
       to_login_page: ログインページへ
   user_sessions:
+    flash_messages:
+      login_success: ログインしました
+      login_danger: ログインに失敗しました
+      logout_success: ログアウトしました
     new:
       title: ログイン
       to_register_page: 登録ページへ

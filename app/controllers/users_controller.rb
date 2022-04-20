@@ -26,9 +26,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to login_url, flash: { success: t('.flash_messages.create_success') }
+      redirect_to login_url, success: t('.success') 
     else
-      flash.now[:danger] = t('.flash_messages.create_danger')
+      flash.now[:danger] = t('.fail')
       render :new
     end
   end
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, flash: { success: t('.flash_messages.update_success') } }
+        format.html { redirect_to @user, success: t('.success') } 
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -52,7 +52,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, flash: { success: t('.flash_messages.destroy_success') } }
+      format.html { redirect_to users_url, success: t('.success') } 
       format.json { head :no_content }
     end
   end

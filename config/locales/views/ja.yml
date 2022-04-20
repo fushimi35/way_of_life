@@ -4,21 +4,24 @@ ja:
     register: 登録
     logout: ログアウト
   users:
-    flash_messages:
-      create_success: ユーザー登録が完了しました
-      create_danger: ユーザー登録に失敗しました
-      update_success: ユーザー情報を更新しました
-      update_danger: ユーザー情報の更新に失敗しました
-      destroy_success: ユーザーを削除しました
-      destroy_danger: ユーザー削除に失敗しました
+    create:
+      success: ユーザー登録が完了しました
+      fail: ユーザー登録に失敗しました
+    update:
+      success: ユーザー情報を更新しました
+      fail: ユーザー情報の更新に失敗しました
+    destroy:
+      success: ユーザーを削除しました
+      fail: ユーザー削除に失敗しました
     new:
       title: ユーザー登録
       to_login_page: ログインページへ
   user_sessions:
-    flash_messages:
-      login_success: ログインしました
-      login_danger: ログインに失敗しました
-      logout_success: ログアウトしました
+    create:
+      success: ログインしました
+      fail: ログインに失敗しました
+    destroy:
+      success: ログアウトしました
     new:
       title: ログイン
       to_register_page: 登録ページへ

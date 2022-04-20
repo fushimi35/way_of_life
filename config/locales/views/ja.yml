@@ -7,6 +7,10 @@ ja:
     flash_messages:
       create_success: ユーザー登録が完了しました
       create_danger: ユーザー登録に失敗しました
+      update_success: ユーザー情報を更新しました
+      update_danger: ユーザー情報の更新に失敗しました
+      destroy_success: ユーザーを削除しました
+      destroy_danger: ユーザー削除に失敗しました
     new:
       title: ユーザー登録
       to_login_page: ログインページへ

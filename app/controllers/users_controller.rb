@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, flash: { success: 'User was successfully updated.' } }
+        format.html { redirect_to @user, flash: { success: t('.flash_messages.update_success') } }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -52,7 +52,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, flash: { success: 'User was successfully destroyed.' } }
+      format.html { redirect_to users_url, flash: { success: t('.flash_messages.destroy_success') } }
       format.json { head :no_content }
     end
   end

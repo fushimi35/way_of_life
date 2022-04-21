@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
+
   validates :first_name, presence: true, length: { maximum: 255 }
   validates :last_name, presence: true, length: { maximum: 255 }
 
@@ -8,4 +9,6 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, if: -> {new_record? || changes[:crypted_password]}
 
   validates :email, presence: true, uniqueness: true
+
+  has_many :boards, dependent: :destroy
 end

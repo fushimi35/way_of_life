@@ -40,5 +40,6 @@ module RunteqNormal
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s] # ファイルの追加
     # タイムゾーンの設定
     config.time_zone = 'Asia/Tokyo'
+    config.active_record.default_timezone = :local
   end
 end

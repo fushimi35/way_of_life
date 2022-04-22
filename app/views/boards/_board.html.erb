@@ -3,7 +3,7 @@
     <div class="card"><img class="card-img-top" src="/assets/board_placeholder.png" width="300" height="200"/>
       <div class="card-body">
         <h4 class="card-title">
-          <a href="#">タイトル0</a>
+          <%= board.title %>
         </h4>
         <div class='mr10 float-right'>
           <%= link_to '#', id: 'button-edit-#{board.id}' do %>
@@ -14,10 +14,10 @@
           <% end %>
         </div>
         <ul class="list-inline">
-          <li class="list-inline-item"><i class="far fa-user"></i> 原田 優衣</li>
-          <li class="list-inline-item"><i class="far fa-calendar"></i> 2019/12/26 17:00</li>
+          <li class="list-inline-item"><i class="far fa-user"></i><%= board.user.decorate.full_name %></li>
+          <li class="list-inline-item"><i class="far fa-calendar"></i><%= l board.created_at, format: :long %></li>
         </ul>
-        <p class="card-text">本文0</p>
+        <p class="card-text"><%= board.body %></p>
       </div>
     </div>
   </div>

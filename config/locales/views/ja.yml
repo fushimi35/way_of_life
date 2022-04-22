@@ -1,29 +1,42 @@
 ja:
   defaults:
-    login: ログイン
-    register: 登録
-    logout: ログアウト
+    login: 'ログイン'
+    register: '登録'
+    logout: 'ログアウト'
+    message:
+      require_login: 'ログインしてください'
   users:
     create:
-      success: ユーザー登録が完了しました
-      fail: ユーザー登録に失敗しました
+      success: 'ユーザー登録が完了しました'
+      fail: 'ユーザー登録に失敗しました'
     update:
-      success: ユーザー情報を更新しました
-      fail: ユーザー情報の更新に失敗しました
+      success: 'ユーザー情報を更新しました'
+      fail: 'ユーザー情報の更新に失敗しました'
     destroy:
-      success: ユーザーを削除しました
-      fail: ユーザー削除に失敗しました
+      success: 'ユーザーを削除しました'
+      fail: 'ユーザー削除に失敗しました'
     new:
-      title: ユーザー登録
-      to_login_page: ログインページへ
+      title: 'ユーザー登録'
+      to_login_page: 'ログインページへ'
   user_sessions:
     create:
-      success: ログインしました
-      fail: ログインに失敗しました
+      success: 'ログインしました'
+      fail: 'ログインに失敗しました'
     destroy:
-      success: ログアウトしました
+      success: 'ログアウトしました'
     new:
-      title: ログイン
-      to_register_page: 登録ページへ
-      password_forget: パスワードをお忘れの方はこちら
+      title: 'ログイン'
+      to_register_page: '登録ページへ'
+      password_forget: 'パスワードをお忘れの方はこちら'
 
+  boards:
+    index:
+      title: '掲示板一覧'
+      no_result: '掲示板がありません。'
+    new:
+      title: '掲示板作成'
+    bookmarks:
+      title: 'ブックマーク一覧'
+    profiles:
+      show:
+        title: 'プロフィール'

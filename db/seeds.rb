@@ -15,17 +15,10 @@
   )
 }
 
-20.times {
+20.times{|index|
   Board.create!(
-    title: Faker::BossaNova.artist,
-    body: Faker::String.random,
-    user: User.find(rand(1..5))
+    title: "タイトル#{index}",
+    body: "本文#{index}",
+    user: User.offset(rand(User.count)).first
   )
 } 
-#10.times do |n|
-#  Board.create!(
-#    title: Faker::BossaNova.artist,
-#    body: Faker::String.random,
-#    user_id: n
-#  )
-#end 

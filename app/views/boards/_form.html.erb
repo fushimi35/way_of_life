@@ -1,3 +1,4 @@
+<%= render partial:'shared/error_message', locals: { object: board } %>
 <%= form_with(model: board, local: true) do |form| %>
   <div class="form-group">
     <%= form.label :title %>

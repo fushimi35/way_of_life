@@ -9,5 +9,7 @@ class BoardDecorator < ApplicationDecorator
   #       object.created_at.strftime("%a %m/%d/%y")
   #     end
   #   end
-
+  def img_url
+    return object.avatar_path.url || "/assets/board_placeholder.png" 
+  end
 end

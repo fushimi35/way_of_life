@@ -10,6 +10,6 @@ class BoardDecorator < ApplicationDecorator
   #     end
   #   end
   def img_url
-    return object.avatar_path.url || "/assets/board_placeholder.png" 
+    return object.board_image.url || "/assets/board_placeholder.png" 
   end
 end

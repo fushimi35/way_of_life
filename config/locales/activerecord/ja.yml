@@ -13,4 +13,4 @@ ja:
       board:
         title: 'タイトル'
         body: '本文'
-        avatar_path: 'サムネイル'
+        board_image: 'サムネイル'

@@ -17,6 +17,7 @@ class BoardsController < ApplicationController
   def show
     @board = Board.find(params[:id])
     @comments = @board.comments.all
+    @comment = @board.comments.new()
   end
 
   private

@@ -3,10 +3,13 @@ ja:
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
+    post: '投稿'
     message:
       require_login: 'ログインしてください'
       created: "%{item}を作成しました"
       not_created: "%{item}を作成できませんでした"
+    placeholder:
+      comment: 'コメント'
   users:
     create:
       success: 'ユーザー登録が完了しました'

@@ -35,8 +35,7 @@
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
       <table id="js-table-comment" class="table">
-    
-        <%= render partial: 'comments/comment', locals: {board: @board, comment: @comments.first} %>
+        <%= render partial: 'comments/comment', collection: @comments, locals: {board: @board} %>
       </table>
     </div>
   </div>

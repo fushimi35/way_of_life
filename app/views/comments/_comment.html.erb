@@ -16,7 +16,7 @@
 
   <td class="action">
     <ul class="list-inline justify-content-center" style="float: right;">
-      <% if current_user.id == board.user_id %>
+      <% if current_user.id == comment.user_id %>
         <li class="list-inline-item">
         <a href="#"><%= icon 'fa', 'pen' %></a>
         </li>

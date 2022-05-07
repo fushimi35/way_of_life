@@ -12,4 +12,22 @@ class User < ApplicationRecord
 
   has_many :boards, dependent: :destroy
   has_many :comments, dependent: :destroy
+  
+  def own?(object)
+    id == object.user_id
+  end
+
+  # def change_email(email_after)
+  #   email = email_after
+  # end
+
+  # def public_method
+  #   self.private_method = "something"
+  # end
+
+  # private
+
+  # def private_method=(something)
+  #   @something = something
+  # end
 end

@@ -41,6 +41,8 @@ ja:
     new:
       title: '掲示板作成'
       register: '登録する'
+    show:
+      title: '掲示板詳細'
     bookmarks:
       title: 'ブックマーク一覧'
     profiles:

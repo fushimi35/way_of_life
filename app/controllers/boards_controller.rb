@@ -16,7 +16,7 @@ class BoardsController < ApplicationController
   end
   def show
     @board = Board.find(params[:id])
-    @comments = @board.comments.all.order(created_at: :DESC)
+    @comments = @board.comments.includes(:user).order(created_at: :DESC)
     @comment = @board.comments.new()
   end
 

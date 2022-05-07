@@ -1,6 +1,10 @@
-<%= form_with(model:[board,comment], local: true) do |f| %>
-  <%= f.label Comment.model_name.human %>
-  <%= f.text_area :body, class: "form-control mb-3", row:"4", placeholder: "#{t('defaults.placeholder.comment')}" %>
-  <%= f.submit t('defaults.post'), class: 'btn btn-primary' %>
-<% end %>
-
+<div class="row mb-3">
+  <div class="col-lg-8 offset-lg-2">
+    <%= form_with(model:[board,comment], local: true) do |f| %>
+      <%= render 'shared/error_message', object: f.object %>
+      <%= f.label Comment.model_name.human %>
+      <%= f.text_area :body, class: "form-control mb-3", row:"4", placeholder: "#{t('defaults.placeholder.comment')}" %>
+      <%= f.submit t('defaults.post'), class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>

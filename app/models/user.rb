@@ -17,17 +17,4 @@ class User < ApplicationRecord
     id == object.user_id
   end
 
-  # def change_email(email_after)
-  #   email = email_after
-  # end
-
-  # def public_method
-  #   self.private_method = "something"
-  # end
-
-  # private
-
-  # def private_method=(something)
-  #   @something = something
-  # end
 end

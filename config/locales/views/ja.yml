@@ -8,8 +8,13 @@ ja:
       require_login: 'ログインしてください'
       created: "%{item}を作成しました"
       not_created: "%{item}を作成できませんでした"
+      updated: "%{item}を更新しました"
+      not_updated: "%{item}を更新できませんでした"
+      deleted: "%{item}を削除しました"
     placeholder:
       comment: 'コメント'
+    confirm:
+      delete: "%{item}を削除しますか？"
   users:
     create:
       success: 'ユーザー登録が完了しました'
@@ -48,3 +53,9 @@ ja:
     profiles:
       show:
         title: 'プロフィール'
+    edit:
+      title: '掲示板編集'
+      register: '更新する'
+    update:
+      success: '掲示板を更新しました'
+      fail: '掲示板を更新できませんでした'

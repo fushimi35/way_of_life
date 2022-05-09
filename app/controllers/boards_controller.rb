@@ -20,8 +20,7 @@ class BoardsController < ApplicationController
     @comments = @board.comments.includes(:user).order(created_at: :DESC)
     @comment = @board.comments.new()
   end
-  def edit
-  end
+  def edit; end
   def update
     if @board.update(board_params)
       redirect_to board_path, success: t('defaults.message.updated', item: Board.model_name.human)

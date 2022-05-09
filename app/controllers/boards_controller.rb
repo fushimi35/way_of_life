@@ -23,7 +23,7 @@ class BoardsController < ApplicationController
   def edit; end
   def update
     if @board.update(board_params)
-      redirect_to board_path, success: t('defaults.message.updated', item: Board.model_name.human)
+      redirect_to @board, success: t('defaults.message.updated', item: Board.model_name.human)
     else
       flash.now[:danger] = t('defaults.message.not_updated', item: Board.model_name.human)
       render :edit

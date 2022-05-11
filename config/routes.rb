@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'static_pages#top'
   resources :users, only: %i[new create]
   resources :boards do
-    resources :comments, shallow: true
+    resources :comments, shallow: true, only: %i[create]
   end
 
   get 'login' => 'user_sessions#new', :as => :login

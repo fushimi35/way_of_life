@@ -12,6 +12,8 @@ ja:
       not_updated: "%{item}を更新できませんでした"
       deleted: "%{item}を削除しました"
       delete_confirm: '削除しますか？'
+      bookmarked: 'ブックマークしました'
+      unbookmarked: 'ブックマークを外しました'
     placeholder:
       comment: 'コメント'
   users:
@@ -49,6 +51,7 @@ ja:
       title: '掲示板詳細'
     bookmarks:
       title: 'ブックマーク一覧'
+      no_result: 'ブックマーク中の掲示板がありません'
     profiles:
       show:
         title: 'プロフィール'

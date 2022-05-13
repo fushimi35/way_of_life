@@ -1,4 +1,6 @@
 <div class='float-right d-inline'>
-	<%= icon 'far', 'star' %>
+  <%= link_to board_bookmarks_path(board), method: :post, id: "js-bookmark-button-for-board-id-#{ board.id }" do %>
+    <%= icon 'far', 'star' %>
+  <% end %>
 </div>
 

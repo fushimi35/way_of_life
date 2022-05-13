@@ -1,1 +1,5 @@
-<%= render 'unbookmark' %>
+<% if current_user.likes.find_by(id: board.id).nil? %>
+  <%= render 'unbookmark', board: board %>
+<% else %>
+  <%= render 'bookmark', board: board %>
+<% end %>

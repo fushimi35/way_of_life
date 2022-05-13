@@ -1,0 +1,5 @@
+<div class="float-right d-inline">
+  <%= link_to bookmark_path(board), method: :delete, id: "js-bookmark-button-for-board-id-#{ board.id }" do %>
+    <%= icon 'fas', 'star' %>
+  <% end %>
+</div>

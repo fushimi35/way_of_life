@@ -1,7 +1,11 @@
 class BoardsController < ApplicationController
   before_action :set_board, only:%i[edit update destroy]
+  def bookmarks
+    # @bookmarks = current_user.likes.includes(:bookmarks)
+    @bookmarks = current_user.likes.includes(:user)
+  end
   def index
-    @boards = Board.all.includes(:user).order(created_at: :desc)
+    @boards = Board.includes(:user,:bookmarks).order(created_at: :desc)
   end
   def new
     @board = current_user.boards.new()

@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   root to: 'static_pages#top'
   resources :users, only: %i[new create]
   resources :boards do
-    resources :comments, shallow: true, only: %i[create]
-    resources :bookmarks, shallow: true, only: %i[create destroy]
+    resources :comments, only: %i[create], shallow: true
+    resources :bookmarks, only: %i[create destroy], shallow: true
     get 'bookmarks', on: :collection
   end
 

@@ -1,6 +1,11 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
 
+  has_many :boards, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :bookmarks
+  has_many :likes, through: :bookmarks, source: :board
+  
   validates :first_name, presence: true, length: { maximum: 255 }
   validates :last_name, presence: true, length: { maximum: 255 }
 
@@ -10,13 +15,17 @@ class User < ApplicationRecord
 
   validates :email, presence: true, uniqueness: true
 
-  has_many :boards, dependent: :destroy
-  has_many :comments, dependent: :destroy
-  has_many :bookmarks
-  has_many :likes, through: :bookmarks, source: :board
-  
   def own?(object)
     id == object.user_id
+  end
+  def bookmark?(board)
+    likes.indlude?(board)
+  end
+  def bookmark(board)
+    likes << board
+  end
+  def unbookmark(board)
+    likes.destroy(board)
   end
 
 end

@@ -19,7 +19,6 @@ class User < ApplicationRecord
     id == object.user_id
   end
   def bookmark?(board)
-    # likes.include?(board)
     board.bookmarks.pluck(:user_id).include?(id)
   end
   def bookmark(board)

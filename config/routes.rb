@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   resources :users, only: %i[new create]
   resources :boards do
     resources :comments, only: %i[create], shallow: true
-    resources :bookmarks, only: %i[create destroy], shallow: true
     get 'bookmarks', on: :collection
   end
+  resources :bookmarks, only: %i[create destroy]
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'login' => 'user_sessions#create'

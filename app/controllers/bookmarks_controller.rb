@@ -8,7 +8,6 @@ class BookmarksController < ApplicationController
 
   def destroy
     bookmark = current_user.bookmarks.find_by(board_id: params[:id])
-    p bookmark
     bookmark.destroy!
     redirect_to request.referer, success: t('.success')
   end

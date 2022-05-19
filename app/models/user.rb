@@ -19,7 +19,7 @@ class User < ApplicationRecord
     id == object.user_id
   end
   def bookmark?(board)
-    likes.indlude?(board)
+    likes.include?(board)
   end
   def bookmark(board)
     likes << board

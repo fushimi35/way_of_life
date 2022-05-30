@@ -1,0 +1,7 @@
+$(function(){
+  $('#js-comment-error-message').html('<%= error_message(@comment).html_safe %>');
+  <% unless @comment.errors.present? %>
+    $("#js-table-comment.table").html("<%= j(render(@comments)) %>")
+    $("#js-comment-form").val("");
+  <% end %>
+});

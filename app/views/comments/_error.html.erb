@@ -1,0 +1,5 @@
+<% if comment.errors.present?%>
+  <p><%= t('errors.format', attribute: Comment.model_name.human, message: t('errors.messages.blank')) %></p>
+<% else %>
+  <p>bbb</p>
+<% end %>

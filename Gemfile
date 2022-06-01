@@ -70,3 +70,4 @@ gem 'pry-byebug'
 gem 'draper'
 gem 'carrierwave', '~> 2.0'
 gem "mini_magick"
+gem "kaminari"

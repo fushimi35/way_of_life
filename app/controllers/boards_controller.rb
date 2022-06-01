@@ -1,7 +1,7 @@
 class BoardsController < ApplicationController
   before_action :set_board, only:%i[edit update destroy]
   def index
-    @boards = Board.includes(:user,:bookmarks).order(created_at: :desc)
+    @boards = Board.includes(:user,:bookmarks).order(created_at: :desc).page(params[:page])
   end
   def new
     @board = current_user.boards.new()
@@ -34,7 +34,7 @@ class BoardsController < ApplicationController
     redirect_to boards_path, success: t('defaults.message.deleted', item: Board.model_name.human)
   end
   def bookmarks
-    @bookmarks = current_user.likes.includes(:user).order(created_at: :DESC)
+    @bookmarks = current_user.likes.includes(:user).order(created_at: :DESC).page(params[:page])
   end
   
   private

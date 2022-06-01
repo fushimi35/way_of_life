@@ -1,7 +1,7 @@
-$(function(){
-  $('#js-comment-error-message').html('<%= error_message(@comment).html_safe %>');
-  <% unless @comment.errors.present? %>
-    $("#js-table-comment.table").html("<%= j(render(@comments)) %>")
-    $("#js-comment-form").val("");
-  <% end %>
-});
+$("#error_messages").remove()
+<% if @comment.errors.present? %>
+  $("#new_comment").prepend("<%= j(render('shared/error_messages', object: @comment)) %>")
+<% else %>
+  $("#js-table-comment").prepend("<%= j(render('comments/comment', comment: @comment)) %>")
+  $("#js-new-comment-body").val('')
+<% end %>

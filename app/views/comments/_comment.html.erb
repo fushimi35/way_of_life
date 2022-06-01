@@ -23,7 +23,12 @@
           </a>
         </li>
         <li class="list-inline-item">
-          <%= link_to( comment_path(comment), class: "js-delete-comment-button", id: comment.id, method: :delete, remote: true) do %>
+          <%= link_to( comment_path(comment),
+            class: "js-delete-comment-button",
+            id: comment.id,
+            method: :delete,
+            data: {confirm: t('defaults.message.delete_confirm')},
+            remote: true) do %>
           <!-- <a href="" class="js-delete-comment-button" data-comment-id="<%= comment.id %>"> -->
            <%= icon 'fas', 'trash' %>
           <% end %>

@@ -1,10 +1,9 @@
 <div class="row mb-3">
   <div class="col-lg-8 offset-lg-2">
-    <%= form_with(model:[board,comment]) do |f| %>
-      <%= render 'shared/error_message', object: f.object %>
+    <%= form_with(model:[board,comment], id: 'new_comment') do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
       <%= f.label Comment.model_name.human %>
-      <div id="js-comment-error-message"></div>
-      <%= f.text_area :body, id: "js-comment-form", class: "form-control mb-3", row:"4", placeholder: "#{t('defaults.placeholder.comment')}" %>
+      <%= f.text_area :body, id: "js-new-comment-body", class: "form-control mb-3", row:"4", placeholder: "#{t('defaults.placeholder.comment')}" %>
       <%= f.submit t('defaults.post'), class: 'btn btn-primary' %>
     <% end %>
   </div>

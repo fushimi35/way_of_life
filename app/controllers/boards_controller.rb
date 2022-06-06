@@ -1,7 +1,10 @@
 class BoardsController < ApplicationController
   before_action :set_board, only:%i[edit update destroy]
   def index
-    @boards = Board.includes(:user,:bookmarks).order(created_at: :desc).page(params[:page])
+    @q = Board.ransack(params[:q])
+    @boards = @q.result.includes(:user,:bookmarks).order(created_at: :desc).page(params[:page])
+    p @q
+    p @boards
   end
   def new
     @board = current_user.boards.new()

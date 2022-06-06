@@ -71,3 +71,4 @@ gem 'draper'
 gem 'carrierwave', '~> 2.0'
 gem "mini_magick"
 gem "kaminari"
+gem "ransack", '<= 2.6.0'

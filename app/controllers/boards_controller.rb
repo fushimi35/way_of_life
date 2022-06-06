@@ -37,7 +37,8 @@ class BoardsController < ApplicationController
     redirect_to boards_path, success: t('defaults.message.deleted', item: Board.model_name.human)
   end
   def bookmarks
-    @bookmarks = current_user.likes.includes(:user).order(created_at: :DESC).page(params[:page])
+    @q = current_user.likes.ransack(params[:q])
+    @bookmarks = @q.result.includes(:user).order(created_at: :DESC).page(params[:page])
   end
   
   private

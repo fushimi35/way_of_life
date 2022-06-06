@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get 'bookmarks', on: :collection
   end
   resources :bookmarks, only: %i[create destroy]
+  resource :profile, only: %i[show edit]
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'login' => 'user_sessions#create'

@@ -9,6 +9,7 @@ ja:
         last_name: '名'
         first_name: '姓'
         email: 'メールアドレス'
+        avatar: 'アバター'
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
       board:

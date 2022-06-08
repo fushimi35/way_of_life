@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-10 offset-md-1">
       <h1 class="float-left mb-5">プロフィール</h1>
-      <%= link_to '編集', '#', class: 'btn btn-success float-right' %>
+      <%= link_to t('defaults.edit'), edit_profile_path, class: 'btn btn-success float-right' %>
       <table class="table">
         <tr>
           <th scope="row">メールアドレス</th>
@@ -14,7 +14,13 @@
         </tr>
         <tr>
           <th scope="row">アバター</th>
-          <td>アバター</td>
+          <td>
+            <% unless current_user.avatar.file.nil? %>
+              <%= image_tag current_user.avatar.url, size: "50x50", class: 'rounded-circle mr15' %>
+            <% else %>
+              <%= image_tag 'sample.jpg', size: "50x50", class: 'rounded-circle mr15' %>
+            <% end %>
+          </td>
         </tr>
       </table>
     </div>

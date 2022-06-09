@@ -5,7 +5,8 @@ class ProfilesController < ApplicationController
   def edit; end
 
   def update
-    if current_user.update(profile_params)
+    @user = User.find(current_user.id)
+    if @user.update(profile_params)
       redirect_to profile_path, success: t('defaults.message.updated', item: User.model_name.human)
     else
       flash.now[:danger] = t('defaults.message.not_updated', item: User.model_name.human)

@@ -6,6 +6,7 @@ ja:
     edit: '編集'
     update: '更新する'
     post: '投稿'
+    send: '送信'
     search_word: '検索ワード'
     profile: 'プロフィール'
     message:
@@ -41,6 +42,15 @@ ja:
       title: 'ログイン'
       to_register_page: '登録ページへ'
       password_forget: 'パスワードをお忘れの方はこちら'
+  password_resets:
+    new:
+      title: 'パスワードリセット申請'
+    create:
+      success: 'パスワードリセット手順を送信しました'
+    edit:
+      title: 'パスワードリセット'
+    update:
+      success: 'パスワードが変更されました。'
 
   boards:
     index:

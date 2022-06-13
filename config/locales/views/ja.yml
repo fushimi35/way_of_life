@@ -6,7 +6,6 @@ ja:
     edit: '編集'
     update: '更新する'
     post: '投稿'
-    send: '送信'
     search_word: '検索ワード'
     profile: 'プロフィール'
     message:
@@ -45,12 +44,14 @@ ja:
   password_resets:
     new:
       title: 'パスワードリセット申請'
+      submit: '送信'
     create:
       success: 'パスワードリセット手順を送信しました'
     edit:
       title: 'パスワードリセット'
     update:
       success: 'パスワードが変更されました。'
+      fail: 'パスワードの変更に失敗しました。'
 
   boards:
     index:

@@ -16,6 +16,7 @@ class User < ApplicationRecord
   validates :reset_password_token, uniqueness: true, allow_nil: true
 
   validates :email, presence: true, uniqueness: true
+  enum role:{ general:0, admin:1 }
 
   def own?(object)
     id == object.user_id

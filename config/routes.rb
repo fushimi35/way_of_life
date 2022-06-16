@@ -15,4 +15,11 @@ Rails.application.routes.draw do
   post 'login' => 'user_sessions#create'
   post 'logout' => 'user_sessions#destroy', :as => :logout
   resources :password_resets, only: [:new, :create, :edit, :update]
+
+  namespace :admin do
+    root to: 'dashboards#index'
+    resources :boards, :users
+    get 'login', to: 'user_sessions#new'
+    post 'login', to: 'user_sessions#create'
+  end
 end

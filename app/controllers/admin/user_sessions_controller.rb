@@ -1,2 +1,2 @@
-class Admin::UserSessionsController < ApplicationController
+class Admin::UserSessionsController < Admin::BaseController
 end

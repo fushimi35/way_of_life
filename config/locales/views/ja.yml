@@ -85,3 +85,9 @@ ja:
     user_sessions:
       new:
         title: 'ログイン'
+      create:
+        success: 'ログインしました'
+        fail: 'ログインに失敗しました'
+      destroy:
+        success: 'ログアウトしました'
+

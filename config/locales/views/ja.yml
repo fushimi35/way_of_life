@@ -81,3 +81,7 @@ ja:
       title: 'プロフィール'
     edit:
       title: 'プロフィール編集'
+  admin:
+    user_sessions:
+      new:
+        title: 'ログイン'

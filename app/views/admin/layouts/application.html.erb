@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><%= title(yield(:title)) %></title>
+  <title><%= title(yield(:title), admin: true) %></title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
@@ -28,7 +28,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4"></aside>
   <%= render 'admin/shared/sidebar' %>
 
   <!-- Content Wrapper. Contains page content -->

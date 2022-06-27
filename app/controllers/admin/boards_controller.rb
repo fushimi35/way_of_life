@@ -2,7 +2,7 @@ class Admin::BoardsController < Admin::BaseController
   before_action :set_board, only: %i[show edit update destroy]
   def index
     @q = Board.ransack(params[:q])
-    @boards = @q.result(dintinct: true).order(:title).page params[:page]
+    @boards = @q.result(dintinct: true).order(created_at: :desc).page params[:page]
   end
 
   def new

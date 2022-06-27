@@ -7,8 +7,7 @@
       <div class="col-auto">
         <%= f.date_field "created_at_gteq", class: 'form-control' %>
         <span>〜</span>
-        <%= f.date_field "created_at_lteq", class: 'form-control'%>
-        <%# f.select :role_eq, Board.roles_i18n.invert.map{|key, value| [key, Board.roles[value]]}, { include_blank: t('defaults.unspecified') }, { class: 'form-control mr-1' } %>
+        <%= f.date_field "created_at_lteq_end_of_day", class: 'form-control'%>
       </div>
       <div class="col-auto">
         <%= f.submit class: 'btn btn-primary' %>

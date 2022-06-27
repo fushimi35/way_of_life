@@ -8,7 +8,7 @@ module ApplicationHelper
 
     page_title.empty? ? base_title : "#{page_title} | #{base_title}"
   end
-  def active?(controller_name)
+  def active_class(controller_name)
     if params[:controller] == controller_name
       return "active"
     end

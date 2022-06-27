@@ -66,11 +66,12 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootstrap','~>4.1.1'
 gem 'font-awesome-sass', '5.15.1'
 gem 'jquery-rails'
-gem 'sorcery'
+gem 'sorcery' #ログイン、パスワードリセット
 gem 'pry-byebug'
 gem 'draper'
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.0' #画像
 gem "mini_magick"
-gem "kaminari"
-gem "ransack", '<= 2.6.0'
+gem "kaminari" #ページネーション
+gem "ransack", '<= 2.6.0' #検索
 gem 'config'
+gem 'enum_help' #enumの翻訳

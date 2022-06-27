@@ -13,9 +13,18 @@ ja:
         password: 'パスワード'
         password_confirmation: 'パスワード再入力'
         role: '権限'
+        created_at: '作成日時'
+        full_name: '氏名'
       board:
         title: 'タイトル'
         body: '本文'
         board_image: 'サムネイル'
+        user: '作成者'
+        created_at: '作成日時'
       comment:
         body: 'コメント'
+  enums:
+    user:
+      role:
+        general: '一般'
+        admin: '管理者'

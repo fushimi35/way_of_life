@@ -16,16 +16,16 @@ class Admin::BoardsController < Admin::BaseController
 
   def update
     if @board.update(board_params)
-      redirect_to admin_board_path, success: '登録成功'
+      redirect_to admin_board_path, success: t('defaults.message.updated', item: "掲示板")
     else
-      flash.now[:danger] = '登録失敗'
+      flash.now[:danger] = t('defaults.message.not_updated', item: "掲示板")
       render :edit
     end
   end
 
   def destroy
     @board.destroy!
-    redirect_to admin_boards_path, success: '削除成功'
+    redirect_to admin_boards_path, success: t('defaults.message.deleted', item: "掲示板")
   end
 
   private

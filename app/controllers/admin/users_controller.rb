@@ -2,30 +2,27 @@ class Admin::UsersController < Admin::BaseController
   before_action :set_user, only: %i[show edit update destroy]
   def index
     @q = User.ransack(params[:q])
-    @users = @q.result(dintinct: true).order(:name).page params[:page]
+    @users = @q.result(dintinct: true).order(:created_at).page params[:page]
   end
 
-  def new
-  end
+  def new; end
 
-  def show
-  end
+  def show; end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @user.update(user_params)
-      redirect_to admin_user_path, success: '登録成功'
+      redirect_to admin_user_path, success: t('defaults.message.updated', item: "ユーザー") 
     else
-      flash.now[:danger] = '登録失敗'
+      flash.now[:danger] = t('defaults.message.not_updated', item: "ユーザー")
       render :edit
     end
   end
 
   def destroy
     @user.destroy!
-    redirect_to admin_users_path, success: '削除成功'
+    redirect_to admin_users_path, success: t('defaults.message.deleted', item: "ユーザー")
   end
 
   private

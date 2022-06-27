@@ -17,7 +17,7 @@
           <td><%= @board.title %></td>
         </tr>
         <tr>
-          <th scope="row"><%= "作成者" %></th>
+          <th scope="row"><%= Board.human_attribute_name(:user) %></th>
           <td><%= @board.user.decorate.full_name %></td>
         </tr>
         <tr>

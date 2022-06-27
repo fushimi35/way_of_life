@@ -30,5 +30,8 @@ class User < ApplicationRecord
   def unbookmark(board)
     likes.destroy(board)
   end
+  def self.restricted_statuses
+    statuses.except :failed, :destroyed
+  end
 
 end

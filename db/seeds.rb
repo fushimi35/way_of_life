@@ -20,6 +20,7 @@
   Board.create!(
     title: "タイトル#{index}",
     body: "本文#{index}",
-    user: User.offset(rand(User.count)).first
+    user: User.offset(rand(User.count)).first,
+    topic: rand(5)
   )
 } 

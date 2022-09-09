@@ -28,3 +28,10 @@ ja:
       role:
         general: '一般'
         admin: '管理者'
+    board:
+      topic:
+        work_hobby: '働きながら趣味を楽しむ大人の話'
+        couldnt_find: '中高時代にやりたいことが見つからなかったけど、今を楽しむ大人の話'
+        not_talented: '中高時代に「自分には特別な才能がない」と思っていたが、今を楽しむ大人の話'
+        success_big_company: '一流大学に入らずに大企業に就職した大人の話'
+        overcome_parent: '親や先生の反対を押し切って自分の道を選んだ大人の話'

@@ -19,6 +19,9 @@ class BoardsController < ApplicationController
   def show
     @board = Board.find(params[:id])
     @user_now = @board.user.now
+    @user_highschool = @board.user.highschool
+    @user_college = @board.user.college
+    @user_society = @board.user.society
     @comments = @board.comments.includes(:user).order(created_at: :DESC)
     @comment = @board.comments.new()
   end

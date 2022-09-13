@@ -4,6 +4,10 @@ ja:
       user: 'ユーザー'
       board: '掲示板'
       comment: 'コメント'
+      now: '今の仕事・趣味など'
+      highschool: '高校時代について'
+      college: '大学生活について'
+      society: '社会に出てから今にいたるまで'
     attributes:
       user:
         last_name: '名'
@@ -38,6 +42,37 @@ ja:
         time_ratio: '力を入れていることと普段の仕事との時間配分'
         life_score: '生きがいを感じるか(5段階評価)'
         vision: '今後の抱負'
+      highschool:
+        character: '自分の性格、仲間の中での役割'
+        good_at: '得意だったこと'
+        bad_at: '苦手だったこと'
+        friends: '友人にはどんな人が多かったか？'
+        feature_school: '学校の特徴'
+        time_ratio: '一日の時間の過ごし方'
+        grades: '得意科目・苦手科目・成績'
+        subject_choice: '文理選択'
+        reason_subject_choice: '文理選択の理由'
+        club_activities: '所属していた部活・委員会活動等'
+        hobby: '趣味・好きなこと'
+        dream: '憧れていたもの'
+        if_high_school_again: 'もう一度高校生に戻れるならどのように高校時代を過ごすか'
+      college:
+        category_college: '所属'
+        reason_college: '大学を選んだ経緯は？'
+        schedule: '一日 or 一週間の時間の過ごし方'
+        major: '専攻・学科'
+        major_detail: '専攻で学んだ・研究した内容'
+        reason_major: '専攻を選んだ理由（途中で変わった場合は変わった理由もご記入ください）'
+        friends: '周りにいた友達の特徴、どのような人とよく話していたか'
+        experience: '人生に影響した大学時代の経験'
+        challenge: '大学時代にチャレンジしたこと'
+        difference_environment: '大学生活で実感した、高校までとの違い'
+        difference_habits: '大学生活で自分自身の習慣はどう変わったか'
+        reason_first_company: '最初の会社を選んだ経緯は？'
+      society:
+        past_jobs: '今の職業以外で経験した職業'
+        background: '社会に出てから今の生活にいたるまでの経緯は？'
+        turning_point: '社会人になって経験した、人生の転機'
   enums:
     user:
       role:

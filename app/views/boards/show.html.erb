@@ -30,13 +30,46 @@
         </div>
       </article>
       <% byebug %>
-      <h3>今の仕事・趣味など</h3>
+      <h3><%= Now.model_name.human %></h3>
       <% @user_now.attributes.each do |question, answer| %>
         <% if ["id", "user_id", "age", "board_id", "updated_at", "created_at"].include?(question) %>
           <% next %>
         <% else %>
           <% if answer.present? %>
             <h4><%= Now.human_attribute_name(question) %></h3>
+            <p><%= answer %></p>
+          <% end %>
+        <% end %>
+      <% end %>
+      <h3><%= Highschool.model_name.human %></h3>
+      <% @user_highschool.attributes.each do |question, answer| %>
+        <% if ["id", "user_id", "age", "board_id", "updated_at", "created_at"].include?(question) %>
+          <% next %>
+        <% else %>
+          <% if answer.present? %>
+            <h4><%= Highschool.human_attribute_name(question) %></h3>
+            <p><%= answer %></p>
+          <% end %>
+        <% end %>
+      <% end %>
+      <h3><%= College.model_name.human %></h3>
+      <% @user_college.attributes.each do |question, answer| %>
+        <% if ["id", "user_id", "age", "board_id", "updated_at", "created_at"].include?(question) %>
+          <% next %>
+        <% else %>
+          <% if answer.present? %>
+            <h4><%= College.human_attribute_name(question) %></h3>
+            <p><%= answer %></p>
+          <% end %>
+        <% end %>
+      <% end %>
+      <h3><%= Society.model_name.human %></h3>
+      <% @user_society.attributes.each do |question, answer| %>
+        <% if ["id", "user_id", "age", "board_id", "updated_at", "created_at"].include?(question) %>
+          <% next %>
+        <% else %>
+          <% if answer.present? %>
+            <h4><%= Society.human_attribute_name(question) %></h3>
             <p><%= answer %></p>
           <% end %>
         <% end %>

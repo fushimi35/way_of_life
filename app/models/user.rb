@@ -7,6 +7,9 @@ class User < ApplicationRecord
   has_many :bookmarks
   has_many :likes, through: :bookmarks, source: :board
   has_one :now
+  has_one :highschool
+  has_one :college
+  has_one :society
   
   validates :first_name, presence: true, length: { maximum: 255 }
   validates :last_name, presence: true, length: { maximum: 255 }

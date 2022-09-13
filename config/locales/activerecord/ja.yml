@@ -23,6 +23,21 @@ ja:
         created_at: '作成日時'
       comment:
         body: 'コメント'
+      now:
+        job: '仕事'
+        job_detail: '仕事内容'
+        schedule: '1日または1週間のスケジュール'
+        company: '会社'
+        company_feature: '会社の特徴'
+        ability_for_become: '現職に就くために必要な力・資格'
+        necesary_to_keep: '続けるために必要なこと'
+        good_point: '仕事のやりがい'
+        hard_time: '仕事でつらいこと'
+        to_overcome: '辛いことを乗り越えるためにやっていること'
+        private_activity: '仕事以外で力を入れていること'
+        time_ratio: '力を入れていることと普段の仕事との時間配分'
+        life_score: '生きがいを感じるか(5段階評価)'
+        vision: '今後の抱負'
   enums:
     user:
       role:

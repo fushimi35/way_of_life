@@ -11,13 +11,14 @@
     <div class="col-12">
       <div class="row">
         <% if @boards.present? %>
-        <% byebug %>
-        <% Board.topics_i18n.each do |topic| %>
-          <div class="col-12">
-              <h2><%= topic[1] %></h2>
-          </div>
-          <%=  render @boards.where(topic: topic) %>
-        <% end %>
+          <% Board.topics_i18n.each do |topic| %>
+            <% if @boards.where(topic:topic).present? %>
+              <div class="col-12">
+                  <h2><%= topic[1] %></h2>
+              </div>
+              <%=  render @boards.where(topic: topic) %>
+            <% end %>
+          <% end %>
         <% else %>
           <p><%= t('.no_result') %></p>
         <% end %>

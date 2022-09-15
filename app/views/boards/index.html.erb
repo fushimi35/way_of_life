@@ -19,6 +19,9 @@
               <%=  render @boards.where(topic: topic) %>
             <% end %>
           <% end %>
+          <% if logged_in? %>
+            <%= render partial: "same_highschool", locals: {boards: @boards} %>
+          <% end %>
         <% else %>
           <p><%= t('.no_result') %></p>
         <% end %>

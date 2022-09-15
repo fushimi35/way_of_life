@@ -1,0 +1,8 @@
+<% query = boards.where(user_id: User.where(highschool_name: current_user.highschool_name).pluck(:id)) %>
+<% query.delete(current_user.id) %>
+<% if query.present? %>
+  <div class="col-12">
+      <h2 class="mt-5"><%= "#{current_user.highschool_name}高校の社会人の生き方" %></h2>
+  </div>
+    <%= render boards.where(user_id: User.where(highschool_name: current_user.highschool_name).pluck(:id)) %>
+<% end %>

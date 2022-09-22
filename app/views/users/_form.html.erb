@@ -13,6 +13,10 @@
     <%= form.email_field :email, class:'form-control' %>
   </div>
   <div class="form-group">
+    <%= form.label :highschool_name %>
+    <%= form.collection_select :highschool_name, HighschoolName.all, :highschool, :highschool, class:'form-control' %>
+  </div>
+  <div class="form-group">
     <%= form.label :password  %>
     <%= form.password_field :password, class:'form-control' %>
   </div>

@@ -17,6 +17,7 @@ ja:
         password: 'パスワード'
         password_confirmation: 'パスワード再入力'
         role: '権限'
+        highschool_name: '高校名'
         created_at: '作成日時'
         full_name: '氏名'
       board:
@@ -73,6 +74,8 @@ ja:
         past_jobs: '今の職業以外で経験した職業'
         background: '社会に出てから今の生活にいたるまでの経緯は？'
         turning_point: '社会人になって経験した、人生の転機'
+      highschool_name:
+        highschool: '高校名'
   enums:
     user:
       role:

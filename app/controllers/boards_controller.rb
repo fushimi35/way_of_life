@@ -1,9 +1,9 @@
 class BoardsController < ApplicationController
-  skip_before_action :require_login, only: %i[index]
+  skip_before_action :require_login, only: %i[index show]
   before_action :set_board, only:%i[edit update destroy]
   def index
     @q = Board.ransack(params[:q])
-    @boards = @q.result.includes(:user,:bookmarks).order(created_at: :desc).page(params[:page])
+    @boards = @q.result.includes(:user,:bookmarks).order(created_at: :desc).page(params[:page]).where(user: User.where(privacy: 1))
   end
   def new
     @board = current_user.boards.new()

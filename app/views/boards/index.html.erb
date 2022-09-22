@@ -1,31 +1,44 @@
 <% content_for(:title, t('.title')) %>
-<div class="container pt-3">
+<div class="top-wrapper">
+  <div class="top-inner-text">
+    <h1>大人の生き様図鑑</h1>
+  </div>
+</div>
+<div class="container_fluid px-3 pt-3">
   <div class="row">
     <div class="col-lg-10 offset-lg-1">
+      <div class="col-12 px-5">
       <!-- 検索フォーム -->
-      <%= render partial:'search_form', locals:{ q: @q, url: boards_path } %>
+        <%= render partial:'search_form', locals:{ q: @q, url: boards_path } %>
+      </div>
     </div>
   </div>
   <!-- 掲示板一覧 -->
   <div class="row">
     <div class="col-12">
-      <div class="row">
         <% if @boards.present? %>
-          <% Board.topics_i18n.each do |topic| %>
+          <% Board.topics_i18n.each_with_index do |topic, index| %>
             <% if @boards.where(topic:topic).present? %>
-              <div class="col-12">
-                  <h2 class="mt-5"><%= topic[1] %></h2>
+              <div class="row <%= bg_color(index) %>" style="background-color: $indigo-900;" >
+                <div class="col-lg-10 offset-lg-1 col-sm-12">
+                  <div class="col-12 px-5">
+                    <h2 class="mt-5"><%= topic[1] %></h2>
+                    <div class="row">
+                      <%=  render @boards.where(topic: topic) %>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <%=  render @boards.where(topic: topic) %>
             <% end %>
           <% end %>
-          <% if logged_in? %>
-            <%= render partial: "same_highschool", locals: {boards: @boards} %>
-          <% end %>
+          <div class="row">
+            <% if logged_in? %>
+              <%= render partial: "same_highschool", locals: {boards: @boards} %>
+            <% end %>
+          </div>
         <% else %>
           <p><%= t('.no_result') %></p>
         <% end %>
-      </div>
     </div>
   </div>
   <div class="row" >

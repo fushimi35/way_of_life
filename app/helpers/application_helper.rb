@@ -13,4 +13,11 @@ module ApplicationHelper
       return "active"
     end
   end
+  def bg_color(index)
+    if index%2 == 0
+      return "bg-custom"
+    else
+      return "bg-custom2"
+    end
+  end
 end

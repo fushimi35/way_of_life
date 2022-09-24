@@ -4,8 +4,8 @@
     <div class="col-lg-8 offset-lg-2">
       <!-- <h1><%# t('.title') %></h1> -->
       <h1><%= @board.title %></h1>
-      <div class="text-center">
-        <%= image_tag current_user.avatar.url, class: 'rounded-circle mr15', size: '160x160' %>
+      <div class="text-center mb-3">
+        <%= image_tag @board.user.avatar.url, class: 'rounded-circle mr15', size: '160x160' %>
       </div>
       <!-- 掲示板内容 -->
       <article class="card">
@@ -19,7 +19,7 @@
                 <li class="list-inline-item"><%= @user_now.decorate.description %></li>
               </ul>
               <!-- <h3 style='display: inline;'><%# @board.title %></h3> -->
-              <%= render 'crud_menus', board: @board if current_user.own?(@board)%>
+              <%= render 'crud_menus', board: @board if current_user&.own?(@board)%>
               <ul class="list-inline">
                 <li class="list-inline-item"><%= "by #{@board.user.nickname}" %></li>
                 <li class="list-inline-item"><%= l @board.created_at, format: :long %></li>
@@ -29,19 +29,20 @@
           <%= simple_format(@board.body) %>
         </div>
       </article>
-      <% byebug %>
-      <h3><%= Now.model_name.human %></h3>
+      <h3 class="mt-5" style="background-color: lemonchiffon; color: darkorange; padding: 10px"><%= Now.model_name.human %></h3>
       <% @user_now.attributes.each do |question, answer| %>
         <% if ["id", "user_id", "age", "board_id", "updated_at", "created_at"].include?(question) %>
           <% next %>
         <% else %>
           <% if answer.present? %>
             <h4><%= Now.human_attribute_name(question) %></h3>
+            <div style="background:white">
             <p><%= answer %></p>
+            </div>
           <% end %>
         <% end %>
       <% end %>
-      <h3><%= Highschool.model_name.human %></h3>
+      <h3 class="mt-5" style="background-color: lemonchiffon; color: darkorange; padding: 10px"><%= Highschool.model_name.human %></h3>
       <% @user_highschool.attributes.each do |question, answer| %>
         <% if ["id", "user_id", "age", "board_id", "updated_at", "created_at"].include?(question) %>
           <% next %>
@@ -52,7 +53,7 @@
           <% end %>
         <% end %>
       <% end %>
-      <h3><%= College.model_name.human %></h3>
+      <h3 class="mt-5" style="background-color: lemonchiffon; color: darkorange; padding: 10px"><%= College.model_name.human %></h3>
       <% @user_college.attributes.each do |question, answer| %>
         <% if ["id", "user_id", "age", "board_id", "updated_at", "created_at"].include?(question) %>
           <% next %>
@@ -63,7 +64,7 @@
           <% end %>
         <% end %>
       <% end %>
-      <h3><%= Society.model_name.human %></h3>
+      <h3 class="mt-5" style="background-color: lemonchiffon; color: darkorange; padding: 10px"><%= Society.model_name.human %></h3>
       <% @user_society.attributes.each do |question, answer| %>
         <% if ["id", "user_id", "age", "board_id", "updated_at", "created_at"].include?(question) %>
           <% next %>

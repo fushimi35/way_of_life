@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_13_012054) do
+ActiveRecord::Schema.define(version: 2022_09_17_122116) do
 
   create_table "boards", force: :cascade do |t|
     t.string "title", limit: 255, null: false
@@ -59,6 +59,12 @@ ActiveRecord::Schema.define(version: 2022_09_13_012054) do
     t.datetime "updated_at", null: false
     t.index ["board_id"], name: "index_comments_on_board_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "highschool_names", force: :cascade do |t|
+    t.string "highschool"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "highschools", force: :cascade do |t|
